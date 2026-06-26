@@ -48,5 +48,5 @@ app.post("/api/:nombre/:precio", (req, res) => {
 const puerto = process.env.PORT || 3000;
 
 app.listen(puerto, () => {
-    console.log(`API de productos en la url http://localhost:${PORT}`);
+    console.log(`API INICIADA`);
 });
