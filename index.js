@@ -27,11 +27,11 @@ app.get("/api/productos", (req, res) => {
     res.json(productos);
 });
 
-app.post("/api/:nombre/:precio", (req, res) => {
-    const { nombre, precio } = req.params;
+app.post("/api/productos", (req, res) => {
+    const { nombre, precio } = req.body;
 
     const nuevoProducto = {
-        id: productos.length +1,
+        id: productos.length + 1,
         nombre,
         precio: Number(precio)
     };
@@ -39,7 +39,7 @@ app.post("/api/:nombre/:precio", (req, res) => {
     productos.push(nuevoProducto);
 
     res.json({
-        mensaje: "Nuevo producto añadido! ",
+        mensaje: "Nuevo producto añadido!",
         producto: nuevoProducto
     });
 });
