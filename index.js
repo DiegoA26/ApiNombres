@@ -44,8 +44,9 @@ app.post("/api/:nombre/:precio", (req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = import.meta.env.PORT;
+const puerto = process.env.PORT || PORT;
 
-app.listen(PORT, () => {
+app.listen(puerto, () => {
     console.log(`API de productos en la url http://localhost:${PORT}`);
 });
