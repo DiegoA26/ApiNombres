@@ -31,7 +31,7 @@ app.post("/api/:nombre/:precio", (req, res) => {
     const { nombre, precio } = req.params;
 
     const nuevoProducto = {
-        id: productos.length,
+        id: productos.length +1,
         nombre,
         precio: Number(precio)
     };
